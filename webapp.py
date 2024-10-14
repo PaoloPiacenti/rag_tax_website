@@ -1016,7 +1016,7 @@ def send_email(feedback, conversation):
 
 # Function to make API request
 def get_bot_response(question, session_id):
-    url = "https://chat-api-523296903372.europe-west1.run.app/ask"
+    url = "https://chat-api-1087014169033.europe-west1.run.app/ask"
     headers = {"Content-Type": "application/json"}
     data = {
         "question": question,
