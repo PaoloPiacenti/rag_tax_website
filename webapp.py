@@ -1156,7 +1156,7 @@ with input_container:
     user_input = st.text_input(
         "Fai una domanda",
         key=st.session_state['input_key'],
-        placeholder="Type your message here...",
+        placeholder="Esempio: Come si applica l'IVA per i servizi digitali venduti all'estero?",
         on_change=lambda: st.session_state.update({"send_button": True}),
         args=()
     )
