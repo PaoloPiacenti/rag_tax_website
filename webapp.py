@@ -1136,7 +1136,7 @@ st.title("LexFind.it")
 st.subheader("Riduci i tempi di ricerca grazie all'Intelligenza Artificiale")
 
 # Introductory paragraph
-st.markdown("""=
+st.markdown("""
 Ti diamo il benvenuto sul _prototipo_ del nostro Assistente AI sul ***Diritto Tributario***.
 Il chatbot è in grado di basare le proprie risposte sulle *Circolari*, sui *Provvedimenti*, sulle *Risoluzioni*, e sulle
 *Risposte* del ministero per gli anni 2023 e 2024.
