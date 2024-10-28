@@ -1130,17 +1130,18 @@ st.markdown("""
 
 
 # Title
-st.title("🤖 Assistente AI Diritto Tributario")
+st.title("LexFind.it")
+
+# Claim
+st.subheader("Riduci i tempi di ricerca grazie all'Intelligenza Artificiale")
 
 # Introductory paragraph
-st.markdown("""
-**Ciao!** ti presentiamo un _prototipo_ del nostro Assistente AI sul ***Diritto Tributario***.
-Questo Bot è in grado di basare le proprie risposte sulle *Circolari*, sui *Provvedimenti*, sulle *Risoluzioni*, e sulle
+st.markdown("""=
+Ti diamo il benvenuto sul _prototipo_ del nostro Assistente AI sul ***Diritto Tributario***.
+Il chatbot è in grado di basare le proprie risposte sulle *Circolari*, sui *Provvedimenti*, sulle *Risoluzioni*, e sulle
 *Risposte* del ministero per gli anni 2023 e 2024.
 
-*Note*: Questo bot va inteso come un prototipo, e non è garantita la presenza esaustiva delle fonti tantomento la correttezza delle risposte
-
-**Creato con passione dall'** [**Ing. Paolo Piacenti**](https://www.linkedin.com/in/paolopiacenti/) e dall'[Avv. Francesco Venezia](https://it.linkedin.com/in/avvocato-francesco-venezia)
+***Nota**: Questo bot va inteso come un prototipo, pertanto ti invitiamo a verificare la correttezza delle risposte.*
 
 """)
 
@@ -1153,7 +1154,7 @@ input_container = st.container()
 # Input for user's query (Submit on ENTER)
 with input_container:
     user_input = st.text_input(
-        "Ask a question",
+        "Fai una domanda",
         key=st.session_state['input_key'],
         placeholder="Type your message here...",
         on_change=lambda: st.session_state.update({"send_button": True}),
