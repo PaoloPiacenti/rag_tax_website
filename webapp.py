@@ -1199,7 +1199,7 @@ if "send_button" in st.session_state and st.session_state['send_button']:
 
 # Sidebar for feedback submission
 with st.sidebar:
-    st.subheader("Qualche idea? Condivila con noi!")
+    st.subheader("La tua opinione conta!")
 
     # Show feedback input if feedback not already given
     if not st.session_state['feedback_given']:
