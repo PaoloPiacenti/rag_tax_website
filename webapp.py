@@ -1168,7 +1168,7 @@ if "send_button" in st.session_state and st.session_state['send_button']:
         st.session_state['history'].append({"type": "user", "content": user_input})
 
         # Show a loading spinner while waiting for bot response
-        with st.spinner("🤖 Bot is thinking..."):
+        with st.spinner("Ricerca dei documenti rilevanti per il tuo caso..."):
             time.sleep(1)  # Simulate a short delay for effect
             try:
                 # Call the chatbot API to get the response
@@ -1199,11 +1199,11 @@ if "send_button" in st.session_state and st.session_state['send_button']:
 
 # Sidebar for feedback submission
 with st.sidebar:
-    st.subheader("Qualche idea su come migliorare questo bot? Condividi con noi la tua idea!")
+    st.subheader("Qualche idea? Condivila con noi!")
 
     # Show feedback input if feedback not already given
     if not st.session_state['feedback_given']:
-        st.session_state['feedback_text'] = st.text_area("Un tuo feedback", value=st.session_state['feedback_text'])
+        st.session_state['feedback_text'] = st.text_area("Condividi qui le tue considerazione o idee di miglioramento per questo strumento.", value=st.session_state['feedback_text'])
 
         # Submit feedback button
         if st.button("Invia", key="feedback_button"):
@@ -1217,6 +1217,6 @@ with st.sidebar:
                 # Mark feedback as given
                 st.session_state['feedback_given'] = True
             else:
-                st.warning("Please enter some feedback before submitting.")
+                st.warning("Per favore, scrivi qualcosa prima di inviare un messaggio")
     else:
-        st.info("Feedback already submitted. Thank you!")
+        st.info("Feedback inviato. Grazie per il tuo supporto!")
