@@ -1181,7 +1181,7 @@ if "send_button" in st.session_state and st.session_state['send_button']:
                     # Remove duplicate sources
                     sources = list(set(sources))
                     if sources:
-                        sources_text = "\n\n**Sources:**\n" + "\n".join([f"- [{source}]({source_mapping.get(source, '#')})" for source in sources])
+                        sources_text = "\n\n**Fonti:**\n" + "\n".join([f"- [{source}]({source_mapping.get(source, '#')})" for source in sources])
                         answer += sources_text
 
                 # Add bot message to the conversation
@@ -1199,14 +1199,14 @@ if "send_button" in st.session_state and st.session_state['send_button']:
 
 # Sidebar for feedback submission
 with st.sidebar:
-    st.subheader("End Session and Provide Feedback")
+    st.subheader("Qualche idea su come migliorare questo bot? Condividi con noi la tua idea!")
 
     # Show feedback input if feedback not already given
     if not st.session_state['feedback_given']:
-        st.session_state['feedback_text'] = st.text_area("Please provide your feedback:", value=st.session_state['feedback_text'])
+        st.session_state['feedback_text'] = st.text_area("Un tuo feedback", value=st.session_state['feedback_text'])
 
         # Submit feedback button
-        if st.button("Submit Feedback", key="feedback_button"):
+        if st.button("Invia", key="feedback_button"):
             if st.session_state['feedback_text']:
                 # Construct the conversation history as a string
                 conversation = "\n".join([f"{msg['type'].capitalize()}: {msg['content']}" for msg in st.session_state['history']])
